@@ -1,0 +1,65 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+h1, h2, p {
+	margin: 0px;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+$light-yellow: #fefaf4;
+$dark-yellow: #ffebcd;
+$orange: #ff7208;
+
+.form-frame {
+	background-color: $dark-yellow;
+	padding: 20px;
+	margin-top: 40px;
+	border-radius: 3px;
+
+	.user-form {
+		background-color: $light-yellow;
+
+		.fields {
+			height: 35px;
+			text-transform: uppercase;
+			font-size: 12px;
+		}
+
+		label {
+			margin-left: 35px;
+			display: block;
+		}
+
+		.join-me, .the-website, .content {
+			text-align: center;
+		}
+
+		#dropdownMenu1 {
+			text-align: left;
+			text-transform: uppercase;
+			font-size: 12px;
+
+			.caret {
+				float: right;
+				margin-top: 5px;
+			}
+		}
+
+		.submit-button {
+			height: 35px;
+			margin-top: 15px;
+			text-transform: uppercase;
+			background-color: $orange;
+			color: white;
+			border: none;
+		}
+	}
+}
+
+.hidden-field {
+	display: hidden;
+}
+

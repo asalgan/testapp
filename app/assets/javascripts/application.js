@@ -12,5 +12,15 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+//= require bootstrap
 //= require_tree .
+
+$(document).ready(function() { 
+
+	$('.dropdown-toggle').dropdown()
+
+	$('.dropdown').change(function() {
+		$('#third').css('display', ($(this).val() == 'third') ? 'block' : 'none');
+	});
+
+});

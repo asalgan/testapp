@@ -1,0 +1,46 @@
+<div class="form-frame col-md-4 col-md-offset-4">
+	<div class="user-form">
+		<h1 class="join-me">Join me on</h1>
+		<h2 class="the-website"><span class="uppercase">The</span> <span class="uppercase">w</span>eb<span class="uppercase">s</span>ite</h2>
+		<p class="content">Immerse yourself in rich history,</p>
+		<p class="content">beautiful imagery, and exceptional design.</p>
+		
+		<%= form_for(@user) do |f| %>
+			<%#= render 'shared/error_messages' %>
+			<div class="form-field col-md-12">
+				<%= f.label :email, "Introduce yourself..." %>
+				<%= f.text_field :email, :class => "fields col-md-10 col-md-offset-1", :placeholder => "email address" %>
+			</div>
+
+			<div class="form-field col-md-12">
+			  <%= f.label :gender, "are you a..."%>
+				<div class="dropdown">
+		  		<button class="btn btn-default dropdown-toggle fields col-md-10 col-md-offset-1 " type="button" id="dropdownMenu1" data-toggle="dropdown">
+				    Choose one
+				    <span class="caret"></span>
+		  		</button>
+		  		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="#" id="first">Option A</a></li>	  
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="#" id="second">Option B</a></li>	  		
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="#" id="third">Option C</a></li>	  			
+		  		</ul>
+				</div>
+			</div>
+
+			<div class="form-field col-md-12" id="third" style="display: none;">
+				<%= f.label :hidden_field, "New field" %>
+				<%= f.text_field :hidden_field, id: "3", :class => "fields col-md-10 col-md-offset-1", :placeholder => "hidden field" %>
+			</div>
+
+			<div class="form-field col-md-12">
+				<%= f.label :password, "create a password..." %>
+				<%= f.password_field :password, :class => "fields col-md-10 col-md-offset-1", :placeholder => "***********"  %>
+			</div>
+
+			<div class="submit">
+				<%= f.submit "Start discovering", :class => "submit-button col-md-6 col-md-offset-3" %>
+			</div>
+
+		<% end %>
+	</div>
+</div>
